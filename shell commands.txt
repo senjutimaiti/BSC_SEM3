@@ -1,0 +1,436 @@
+cal --- no options
+date --- no options
+man
+pwd
+echo --- no options
+mkdir 
+cd 
+cd .. 
+chmod 777 f1.txt
+chmod g+x f1.txt
+chown --- not shown
+touch
+cat
+tac
+cat > 
+cat >>
+cat -n 
+cat f1 f2 > f3 
+rm 
+rmdir -r -f -i
+mv --- no options
+ctrl+d 
+ls -l
+ls -a
+ls -al
+head
+tail ---- head and tail using pipe
+cp --- no options
+cmp --- no options
+comm --- no options
+sort -r -f -n
+grep -v -c -n -i -l ^
+wc -c -l -w
+cut -d -f -c   
+----- ls -l | cut -d " " -f 1,2,8,9
+paste -d 
+----- paste -d "|" A1.txt A2.txt > A4.txt
+tr "[a-z]" "[A-Z]" -d 
+----- cat A4.txt | tr "[a-z]" "[A-Z]" 
+----- echo "Welcome To scc" | tr -d 'W'
+cat text.txt | head -c 6
+
+
+
+date > time.txt
+cal -y >> time.txt 
+rm -d -r test --- -d for directory -f for forceful -r for recursive -i for interactive
+rmdir test --- for removing empty files
+
+
+  933  cat text.txt | head -c 5
+  934  nano text.txt
+  935  cat text.txt | head -c 5
+  936  cat text.txt | head -c 6
+  937  ls -l | cut -d " " 2,3,4,5,6,7,8
+  938  ls -l | cut -d " " -f 2,3,4,5,6,7,8
+  939  ls -l | cut -d " " -f 1,9
+  940  ls -l | cut -c 1-110
+  941  ls -l | cut -b 1-10
+  942  nano test.txt
+  943  cat test.txt | cut -d "|" -f 1,3
+  944  cat test.txt
+  945  cat test.txt | cut -d "|" -f 2,4
+  946  cat test.txt | cut -d "|" -f 1,5
+  947  nano hu.txt
+  948  cat hu.txt
+  949  man rm
+  950  rm -i hu.txt
+  951  ls -l
+  952  rm -i hu.txt
+  953  ls -l
+  954  echo "Welcome to scc" | tr 'W'
+  955  echo "Welcome to scc" | tr -d 'W'
+  956  man tr
+  957  nano text.txt
+  958  cat text.txt
+  959  cat text.txt | tr -d "[0-9]"
+  960  cat text.txt | tr -c -d "[0-9]"
+  961  cat text.txt | tr -c -d "[a-z]" "[A-Z]" ' '
+  962  cat text.txt | tr -c -d "[a-z]" "[A-Z]" " "
+  963  man tr
+  964  cat text.txt | tr -c -d "[a-z,A-Z, ]"
+  965  touch t1.txt
+  966  touch t2.txt
+  967  touch t3.txt
+  968  touch tempo.txt
+  969  touch teMPO.txt
+  970  touch TEMPO.txt
+  971  touch Tempo.txt
+  972  ls -l
+  973  man grep
+  974  ls -l | grep -v -i tempo
+  975  nano text.txt
+  976  cat text.txt
+  977  cat -n text.txt
+  978  cat -n text.txt | head -5 | tail -3
+  979  man cal
+  980  cat > t1.txt
+  981  cat > t2.txt
+  982  cat t2.txt
+  983  cat t1.txt
+  984  cat t1.txt t2.txt > t3.txt
+  985  cat t3.txt
+  986  cat t1.txt t2.txt > t3.txt
+  987  cat t3.txt
+  988  cat t1.txt t2.txt >> t3.txt
+  989  cat t3.txt
+ 1073  pwd -L
+ 1074  pwd -p
+ 1075  pwd -P
+ 1076  pwd
+ 1077  echo
+ 1078  echo "Hey"
+ 1079  man echo
+ 1080  echo "Hey\nHello h\b"
+ 1081  echo -e "Hey\nHello h\b"
+ 1082  man echo
+ 1083  echo -e "Hey\nHello h\b\b"
+ 1084  echo -e "Hey\nHello\thowdy"
+ 1085  echo -e "Hey\nHello\thow\vdy"
+ 1086  man echo
+ 1087  echo -e "Hey\\\v\nHello\thowdy"
+ 1088  echo -e "Hey\n\vHello\thowdy"
+ 1089  echo "Hey\n\vHello\thowdy"
+ 1090  echo -e "Hey\n\vHello\thowdy"
+ 1091  mkdir tom
+ 1092  ls -l
+ 1093  cd tom
+ 1094  cat > to.txt
+ 1095  cat to.txt
+ 1096  cd
+ 1097  ls -l
+ 1098  man mkdir
+ 1099  mkdir -m 777 tom2
+ 1100  ls -l
+ 1101  chmod g=rwx tom2
+ 1102  ls -l | grep tom2
+ 1103  chmod g-rwx tom2
+ 1104  ls -l | grep tom2
+ 1105  chmod a-rwx tom2
+ 1106  ls -l | grep tom2
+ 1107  chmod u+rwx tom2
+ 1108  ls -l | grep tom2
+ 1109  chmod go+rx tom2
+ 1110  ls -l | grep tom2
+ 1111  chmod a=rwx tom2
+ 1112  ls -l | grep tom2
+ 1113  chmod a-rwx tom2
+ 1114  ls -l | grep tom2
+ 1115  chmod uo=rw tom2
+ 1116  ls -l | grep tom2
+ 1117  chmod a=rwx tom2
+ 1118  chmod uo=rw tom2
+ 1119  ls -l | grep tom2
+ 1120  chmod a=rwx tom2
+ 1121  chmod u=r tom2
+ 1122  ls -l | grep tom2
+ 1123  chmod u+w tom2
+ 1124  ls -l | grep tom2
+ 1125  man chmod
+ 1126  clear
+ 1127  man cd
+ 1128  man mkdir
+ 1129  man chown
+ 1130  man touch
+ 1131  cd test
+ 1132  date
+ 1133  date > time.txt
+ 1134  ls -l
+ 1135  cat time.txt
+ 1136  cal -y >> time.txt
+ 1137  cat time.txt
+ 1138  cal -y >> tim.txt
+ 1139  ls -l
+ 1140  cat tim.txt
+ 1141  man rm
+ 1142  touch -foo.txt
+ 1143  touch -- -foo.txt
+ 1144  ls -l
+ 1145  rm -- -foo.txt
+ 1146  ls -l
+ 1147  rm -i tempo.txt
+ 1148  rm TEMPO.txt
+ 1149  rm Tempo.txt
+ 1150  rm teMPO.txt
+ 1151  ls -l
+ 1152  rm tim.txt
+ 1153  rm time.txt
+ 1154  ls -l
+ 1155  cd ..
+ 1156  ls -l
+ 1157  mkdir tom2
+ 1158  rmdir tom2
+ 1159  ls -l
+ 1160  rmdir tom
+ 1161  rmdir -r tom
+ 1162  man rmdir
+ 1163  rmdir -r tom
+ 1164  rm tom
+ 1165  rm -d -r tom
+ 1166  ls -l
+ 1167  man rmdir
+ 1168  man rm
+ 1169  mkdir tom
+ 1170  cd tom
+ 1171  cat > tep.txt
+ 1172  ls -l
+ 1173  cd ..
+ 1174  rm tom
+ 1175  rm -d tom
+ 1176  rm -r tom
+ 1177  ls -l
+ 1178  clear
+ 1179  cd test
+ 1180  nano tep.txt
+ 1181  rm tep.txt
+ 1182  clear
+ 1183  man touch
+ 1184  man cat
+ 1185  ls -l
+ 1186  cat t1.txt
+ 1187  nano t1.txt
+ 1188  cat t1.txt
+ 1189  cat -s t1.txt
+ 1190  cat -b t1.txt
+ 1191  cat -n t1.txt
+ 1192  cat -A t1.txt
+ 1193  cat -e t1.txt
+ 1194  cat -T t1.txt
+ 1195  cat -t t1.txt
+ 1196  cat -E t1.txt
+ 1197  cat -v t1.txt
+ 1198  nano t1.txt
+ 1199  cat t1.txt
+ 1200  cat -T t1.txt
+ 1201  man tac
+ 1202  tac t1.txt
+ 1203  tac -b t1.txt
+ 1204  man tac
+ 1205  nano t1.txt
+ 1206  tac -b t1.txt
+ 1207  tac t1.txt
+ 1208  man mv
+ 1209  mv t1.txt t.txt
+ 1210  ls -z
+ 1211  ls -l
+ 1212  mkdir zx
+ 1213  cd zx
+ 1214  mkdir nm
+ 1215  cd nm
+ 1216  cat > op.c
+ 1217  ls -l
+ 1218  mv op.c
+ 1219  mv op.c ../
+ 1220  ls -l
+ 1221  cd ..
+ 1222  ls -l
+ 1223  mv op.c ../
+ 1224  ls -l
+ 1225  cd ..
+ 1226  ls -l
+ 1228  mv op.c zx/nm
+ 1229  cd zx
+ 1230  ls -l
+ 1231  cd nm
+ 1232  ls -l
+ 1233  mv op.c ../../
+ 1234  ls -l
+ 1235  cd
+ 1236  ls -l
+ 1237  cd test
+ 1238  ls -l
+ 1239  rm op.c
+ 1240  rm -r zx
+ 1241  ls -l
+ 1242  man ls
+ 1243  ls -C
+ 1244  ls -Cl
+ 1245  ls -al
+ 1246  ls -la
+ 1247  ls -lo
+ 1248  ls -lg
+ 1249  ls -lgo
+ 1250  man ls
+ 1251  cd test
+ 1252  ls -l
+ 1253  cat t.txt
+ 1254  head -4 t.txt
+ 1255  tail -4 t.txt
+ 1256  sort t2.txt
+ 1257  sort t3.txt
+ 1258  comm t2.txt t3.txt
+ 1259  cat > t2.txt
+ 1260  cat > t3.txt
+ 1261  sort t2.txt
+ 1262  cat > t3.txt
+ 1263  sort t3.txt
+ 1264  comm t2.txt t3.txt
+ 1265  cat > t3.txt
+ 1266  cat > t2.txt
+ 1267  sort t3.txt
+ 1268  sort t2.txt
+ 1269  comm t2.txt t3.txt
+ 1270  comm t2.txt t3.txt | cut -c 3
+ 1271  comm t2.txt t3.txt | cut -f 3
+ 1272  comm t2.txt t3.txt | cut -d " " -f 3
+ 1273  comm t2.txt t3.txt | cut -f 2
+ 1274  comm t2.txt t3.txt | cut -f 1,2,3
+ 1275  cat t2.txt
+ 1276  more t2.txt
+ 1277  cmm t2.txt t3.txt
+ 1278  cmp t2.txt t3.txt
+ 1279  diff t2.txt t3.txt
+ 1280  wc t2.txt
+ 1281  ls -l
+ 1282  cd ..
+ 1283  ls -l
+ 1284  cat fn_GcdLcm.sh
+ 1285  cat maxMinArr.sh
+ 1286  cat vowFreq.sh
+ 1287  ls -l
+ 1288  cat testcmd.sh
+ 1289  cd ..
+ 1290  mnt f
+ 1291  cd mnt/f/college
+ 1292  ls -l
+ 1293  cat cmdStrAbbre.sh
+ 1294  cd
+ 1295  ls -l
+ 1296  calculator.sh
+ 1297  cat calculator.sh
+ 1298  bash calculator.sh
+ 1299  nano calculator.sh
+ 1300  clear
+ 1301  cd test
+ 1302  cat test.txt
+ 1303  wc test.txt
+ 1304  man wc
+ 1305  wc -m test.txt
+ 1306  man wc
+ 1307  wc -L test.txt
+ 1308  man uniq
+ 1309  cat t1.txt
+ 1310  cat t\txt
+ 1311  cat t.txt
+ 1312  cat
+ 1313  uniq t.txt
+ 1314  man uniq
+ 1315  uniq -u t.txt
+ 1316  uniq -c t.txt
+ 1317  cat > t.txt
+ 1318  uniq -c t.txt
+ 1319  uniq t.txt
+ 1320  uniq -u t.txt
+ 1321  uniq -i t.txt
+ 1322  uniq -ic t.txt
+ 1323  uniq -idc t.txt
+ 1324  man cut
+ 1325  cat t.txt | cut -b 1-2,7-
+ 1326  cat t.txt | cut -b 1-2,7-10
+ 1327  cat t.txt | cut --complement -b 1-2,7-10
+ 1328  cat t.txt | cut -d " " -f 1
+ 1329  cat t.txt | cut -d " " -f 1,2
+ 1330  cat t.txt | cut -d " " -f 3
+ 1331  cat t.txt | cut -d " " -f ,,3
+ 1332  cat t.txt | cut -d " " -f ,1
+ 1333  cat t.txt | cut -d " " -f 3,4
+ 1334  man cut
+ 1335  cat t.txt | cut -c [k-z]
+ 1336  cat t.txt | cut -c 2-6
+ 1337  cut -d "|" -f 2,4 test.txt | cut -c 2,6
+ 1338  cut -d "|" -f 2,4 test.txt | cut -c 2,6 t.txt
+ 1339  paste test.txt t.txt > text.txt
+ 1340  cat text.txt
+ 1341  paste -d "|" test.txt t.txt > text.txt
+ 1342  cat text.txt
+ 1343  cat text.txt | tr "[a-z]" "[A-Z]"
+ 1344  cat text.txt | tr "[a-p]" "[A-P]"
+ 1345  cat text.txt | tr "[a-j]" "[0-9]"
+ 1346  cat text.txt | tr [a-j] [0-9]
+ 1347  man paste
+ 1348  paste -s test.txt t.txt > text.txt
+ 1349  cat text.txt | tr [a-j] [0-9]
+ 1350  man tr
+ 1351  cat > text.txt
+ 1352  cat text.txt | tr -s [a-z,A-Z]
+ 1353  cat text.txt | tr -d [a-z,A-Z]
+ 1354  cat text.txt | tr -dc [a-z,A-Z]
+ 1355  cat text.txt | tr -dsc [a-z,A-Z]
+ 1356  cat text.txt | tr -dc [a-z,A-Z]
+ 1357  cat text.txt | tr -dc [a-z,A-Z] > t1.txt
+ 1358  cat t1.txt
+ 1359  ls -X
+ 1360  ls -Xl
+ 1361  ls -Rl
+ 1362  ls -lh
+ 1363  cd ..
+ 1364  ls -Xl
+ 1365  ls -Rl
+ 1366  ls -lS
+ 1367  ls -lS --color
+ 1368  cd test
+ 1369  cat t.txt
+ 1370  grep ^h t.txt
+ 1371  grep -i ^h t.txt
+ 1372  grep -i h t.txt
+ 1373  grep -vi ^h t.txt
+ 1374  grep -v ^h t.txt
+ 1375  grep -l h t.txt
+ 1376  grep -c h t.txt
+ 1377  grep -n h t.txt
+ 1378  man grep
+ 1379  grep -i $h t.txt
+ 1380  history
+
+1. What is a process in OS? Is shell a process? Name the command to view all the running 
+processes.
+You10:18 AM
+ls -l | cut -c 1-10
+Nivedita Saha10:18 AM
+2. Extract and display the file permissions from the output of the ls -l command.
+You10:19 AM
+ls -l | cut -d " " -f 1
+Nivedita Saha10:19 AM
+3. Add two floating point numbers ‘a’ and ‘b’ and display the sum to two decimal places.
+Nivedita Saha10:20 AM
+4. Count the number of lines from a file name as ‘myfile.txt’ that does not contain the word ‘THE’ in any form.
+You10:20 AM
+sum=`echo "scale=2; $a + $b" | bc`
+You10:22 AM
+grep -vi "the" myfile.txt | wc -l
+Nivedita Saha10:24 AM
+5. Consider a 2D array ‘arr’ and display the value of an element located at ith row and jth column.
+You10:25 AM
+${arr[$i]}
+${arr[$i $j]}
