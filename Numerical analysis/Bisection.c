@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<math.h>
 #include<stdlib.h>
-/*double f1(double x)
+double f1(double x)
 {
 	return (pow(10,x))+(sin(x))+(2*x);
 }
@@ -86,7 +86,7 @@ int main(void)
 {
 	printf("find the root of the functions are:\n1. 10x + sinx + 2x =0 (upto 4 decimal places)\n2. x^x + 2x - 6 = 0 (upto 3 decimal places)\n");
 	bisection();
-}*/
+}
 main(){
 float a=2.67;
 printf("%10.2f",a);}
